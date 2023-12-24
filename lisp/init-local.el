@@ -19,7 +19,7 @@
 (use-package tree-sitter-langs :ensure t)
 (use-package tree-sitter-indent :ensure t)
 
-(require 'auto-complete-config)
+(require-package 'auto-complete)
 (ac-config-default)
 (setq-default ac-sources
           '(
