@@ -32,7 +32,9 @@ In particular, there's a nice config for *autocompletion* with
 is used to immediately highlight syntax errors in Ruby, Python,
 Javascript, Haskell and a number of other languages.
 
-LSP support is provided using `eglot`. To make it work with python, install `python3-pylsp` deb package (you can do it using apt manager). Then in python buffer run `M-x` `eglot` `RET`
+LSP support is provided using `eglot`. To make it work with python, install `python3-pylsp` deb package (you can do it using apt manager). Then in python buffer run `M-x` `eglot` `RET`.
+
+For `C/C++` support, install `clangd`: `sudo apt install clangd`.
 
 
 ## Supported Emacs versions
