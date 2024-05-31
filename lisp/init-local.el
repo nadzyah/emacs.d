@@ -2,6 +2,7 @@
 (require-package 'spacemacs-theme)
 ;(require-package 'tree-sitter)
 (require-package 'use-package)
+(require-package 'pyvenv)
 
 (setq warning-minimum-level :emergency)
 
@@ -29,7 +30,7 @@
 ;(setq-default ac-sources
 ;          '(
 ;        ac-source-filename
-;        ac-source-abbrev 
+;        ac-source-abbrev
 ;        ac-source-dictionary
 ;        ac-source-words-in-same-mode-buffers))
 
