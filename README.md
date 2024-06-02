@@ -36,6 +36,8 @@ LSP support is provided using `eglot`. To make it work with python, install `pyt
 
 For `C/C++` support, install `clangd`: `sudo apt install clangd`.
 
+For informaition about other languages, check https://github.com/joaotavora/eglot
+
 
 ## Supported Emacs versions
 
