@@ -36,4 +36,6 @@
 
 (use-package auto-compelete :disabled)
 
+(require-package 'xclip)
+
 (provide 'init-local)
