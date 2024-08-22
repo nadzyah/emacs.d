@@ -25,17 +25,11 @@
 (use-package tree-sitter-langs :ensure t)
 (use-package tree-sitter-indent :ensure t)
 
-;(require-package 'auto-complete)
-;(ac-config-default)
-;(setq-default ac-sources
-;          '(
-;        ac-source-filename
-;        ac-source-abbrev
-;        ac-source-dictionary
-;        ac-source-words-in-same-mode-buffers))
-
-(use-package auto-compelete :disabled)
-
 (require-package 'xclip)
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+(require 'eaf)
+(require 'eaf-browser)
+(require 'eaf-pdf-viewer)
 
 (provide 'init-local)

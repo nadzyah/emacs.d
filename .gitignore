@@ -58,3 +58,5 @@ site-lisp/package/
 /projects
 /forge-*.sqlite
 ac-comphist.dat
+eaf
+site-lisp/emacs-application-framework/
