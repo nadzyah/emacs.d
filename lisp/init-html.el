@@ -13,7 +13,7 @@
   (add-hook 'sgml-mode-hook (lambda () (tagedit-mode 1))))
 
 (add-auto-mode 'html-mode "\\.\\(jsp\\|tmpl\\)\\'")
-
+;;; (setq sgml-quick-keys 'close)
 
 (provide 'init-html)
 ;;; init-html.el ends here
