@@ -1,4 +1,5 @@
 (require-package 'spacemacs-theme)
+(require-package 'leuven-theme)
 (require-package 'catppuccin-theme)
 ;(require-package 'tree-sitter)
 (require-package 'use-package)
@@ -7,12 +8,13 @@
 
 (setq warning-minimum-level :emergency)
 
-;(load-theme 'spacemacs-dark t t)
-(load-theme 'catppuccin t t)
+;;;(load-theme 'spacemacs-dark t t)
+;;;(load-theme 'catppuccin t t)
 
-(enable-theme 'catppuccin)
+(load-theme 'leuven-dark t t)
+(enable-theme 'leuven-dark)
 
-;(dired-sidebar-show-sidebar)
+;;;(dired-sidebar-show-sidebar)
 
 (use-package csharp-mode
   :mode "\\.cs$"
