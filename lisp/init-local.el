@@ -6,6 +6,8 @@
 (require-package 'pyvenv)
 (require-package 'mermaid-mode)
 
+(normal-erase-is-backspace-mode 0)
+
 (setq warning-minimum-level :emergency)
 
 ;;;(load-theme 'spacemacs-dark t t)
