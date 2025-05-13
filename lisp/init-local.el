@@ -68,4 +68,18 @@
 
   (add-hook 'pyvenv-post-activate-hooks 'my-pyvenv-set-pythonpath)
   (add-hook 'pyvenv-post-deactivate-hooks (lambda () (setenv "PYTHONPATH" nil))))
+
+
+(normal-erase-is-backspace-mode 0)
+
+(setq your-own-path default-directory)
+(if (file-exists-p
+     (concat your-own-path ".emacs.desktop"))
+    (if (y-or-n-p "Read .emacs.desktop and add hook?")
+    (progn
+      (desktop-read your-own-path)
+      (add-hook 'kill-emacs-hook
+            `(lambda ()
+               (desktop-save ,your-own-path t))))))
+
 (provide 'init-local)
