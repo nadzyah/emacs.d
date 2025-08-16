@@ -13,11 +13,8 @@
 ;;;(load-theme 'spacemacs-dark t t)
 ;;;(load-theme 'catppuccin t t)
 
-;;; (load-theme 'leuven-dark t t)
-;;; (enable-theme 'leuven-dark)
-
-(load-theme 'spacemacs-dark t t)
-(enable-theme 'spacemacs-dark)
+(load-theme 'leuven-dark t t)
+(enable-theme 'leuven-dark)
 
 ;;;(dired-sidebar-show-sidebar)
 
