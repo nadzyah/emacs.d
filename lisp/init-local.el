@@ -82,7 +82,45 @@
             `(lambda ()
                (desktop-save ,your-own-path t))))))
 
-(require 'mml-sec)
-(setq mml-secure-openpgp-key-id "5975E885385EAC626E67EF9E1AF4A75FE769BC68")
-(add-hook 'message-setup-hook #'mml-secure-message-sign-pgpmime)
+(use-package mu4e
+  :ensure nil   ;; mu4e comes with mu in Debian
+  :config
+  ;; base maildir
+  (setq mu4e-maildir "~/Maildir"
+        mu4e-get-mail-command "mbsync -Va"
+        mu4e-update-interval 300
+        mu4e-headers-auto-update t)
+
+  ;; Gmail folders
+  (setq mu4e-sent-folder   "/gmail/[Gmail]/Sent Mail"
+        mu4e-drafts-folder "/gmail/[Gmail]/Drafts"
+        mu4e-trash-folder  "/gmail/[Gmail]/Trash"
+        mu4e-refile-folder "/gmail/[Gmail]/All Mail")
+
+  ;; sending via system nullmailer
+  (setq message-send-mail-function 'message-send-mail-with-sendmail
+        sendmail-program "/usr/sbin/sendmail"
+        message-sendmail-envelope-from 'header
+        mail-specify-envelope-from t
+        mail-envelope-from 'header)
+
+  ;; compose settings
+  (setq user-mail-address "nadzya.info@gmail.com"
+        user-full-name "Nadzeya Hutsko"
+        mu4e-compose-format-flowed t
+        mu4e-headers-show-threads t)
+
+  (setq message-send-mail-function #'message-send-mail-with-sendmail
+      sendmail-program "/usr/sbin/sendmail"  ; nullmailer’s sendmail wrapper
+      message-sendmail-envelope-from 'header
+      mail-specify-envelope-from t
+      mail-envelope-from 'header)
+
+  ;; PGP/MIME signing
+  (require 'mml-sec)
+  (setq mml-secure-openpgp-key-id "5975E885385EAC626E67EF9E1AF4A75FE769BC68")
+  (add-hook 'message-setup-hook #'mml-secure-message-sign-pgpmime))
+ 
+(setq mu4e-compose-in-new-frame nil)
+
 (provide 'init-local)
