@@ -82,4 +82,7 @@
             `(lambda ()
                (desktop-save ,your-own-path t))))))
 
+(require 'mml-sec)
+(setq mml-secure-openpgp-key-id "5975E885385EAC626E67EF9E1AF4A75FE769BC68")
+(add-hook 'message-setup-hook #'mml-secure-message-sign-pgpmime)
 (provide 'init-local)
